@@ -1,0 +1,292 @@
+html,body{
+	height:100%;
+	margin:0;
+	padding:0;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.dashboard{
+	height:100vh;
+	min-height:100vh;
+}
+
+.panel-medium{
+	height:25vh;
+	min-height: 130px;
+}
+.panel-medium .panel-body{
+	padding-top: 30px;
+	padding-left: 40px;
+}
+.panel-medium .panel-body h1{
+	color:#eaeaea;
+	margin-top: 0;
+	font-size: 7vh;
+	font-weight: 200;
+
+}
+.table-sales{
+	overflow-y: scroll;
+	height: 30vh;
+}
+
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+	background-color: #fcfafd;
+}
+
+.right-col{
+	padding-top: 2vh;
+}
+
+.title{
+	font-size: 16px;
+	color:#969696;
+	font-weight: 300;
+}
+.sidebar{
+	background-color:#0e1424;
+	height:100vh;
+	min-height:100vh;
+	position: fixed;
+    z-index: 5;
+	top:0;
+}
+.sidebar .logo{
+	width: 60%;
+	margin: 10px;
+}
+
+.total-sales{
+	padding-top: 2vh;
+	    min-height: 240px;
+}
+.total-sales h1{
+	font-size: 10vw;
+	font-weight: 100;
+	margin-bottom: 40px;
+	margin-top: 0;
+}
+.total-sales .col-xs-8{
+	padding-left: 70px;
+}
+
+#map {
+   width: 100%;
+   height: 350px;
+   background-color: #f7f7f7;
+ }
+
+.tab-pane{
+	padding:10px;
+}
+.mobile-top{
+	background-color:#0e1424;
+	height:50px;
+	width:100%;
+	position: fixed;
+	z-index:5;
+	display:none;
+}
+.mobile-top .logo{
+	width:30px;
+	margin:10px;
+}
+
+.center-col{
+	margin-left: 8%;
+}
+
+.nav-tabs>li>a {
+    color:hotpink;
+    font-size: 12px;
+}
+
+h2 small{
+	font-size:40%;
+}
+
+.page-header{
+	margin-top: 10px;
+	padding-bottom: 0;
+	margin-left: 9%;
+}
+.page-header h2{
+	margin-left: 15px;
+	font-weight: 300;
+}
+.top-3-sellers dl{
+	background: rgba(0, 0, 0, 0.1);
+	background: white;
+	width:90%;
+	padding: 15px;
+	border-radius: 4px;
+	box-shadow: 0px 23px 30px -20px rgba(0, 0, 0, 0.4);
+	border:1px solid #eaeaea;
+	position: absolute;
+}
+.top-3-sellers dl dt{
+	font-weight: 300;
+}
+dl:nth-child(1){
+	opacity: 1;
+    transform:  translate(0, 0);
+	transition: all 450ms ease-in-out;
+	z-index: 2;
+}
+dl:nth-child(2){
+	opacity: 1;
+    transform:  translate(0, 100px);
+    transition: all 450ms ease-in-out;
+	z-index: 3;
+}
+dl:nth-child(3){
+	opacity: 0;
+    transform:  translate(0, 200px);
+  	transition: all 450ms ease-in-out;
+	z-index: 4;
+}
+
+
+/* Modal Stuff*/
+/* The Modal (background) */
+.modaloso {
+    position: fixed; /* Stay in place */
+    z-index: 999999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+	 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+
+/* Media Queries stuff */
+
+
+@media screen and (min-width: 1024px) {
+	.total-sales h1 {
+		font-size: 7vw;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (max-width: 992px) {
+	.page-header{
+		margin-top: 80px;
+		margin-left: 0;
+	}
+	.total-sales h1 {
+		font-size: 13vw;
+	}
+	.panel-medium{
+		width: 45%;
+	}
+	.panel-big{
+		width: 45%;
+		right:15px;
+		top:15px;
+		position:absolute;
+	}
+	.mobile-top{
+		display: block;
+	}
+	.dashboard{
+		margin-top: 50px;
+	}
+	.center-col{
+		margin-left: 0;
+	}
+}
+@media screen and (max-width: 580px) {
+	.total-sales{
+		padding-top: 0;
+	}
+	.total-sales h1 {
+		font-size: 15vw;
+	}
+	.total-sales .col-xs-8{
+		padding-left: 15px;
+	}
+	.total-sales .col-xs-8,.total-sales .col-xs-4{
+		width:100%;
+	}
+	.top-3-sellers{
+		min-height: 90px;
+	}
+	.top-3-sellers dl{
+		font-size: 12px;
+		float:left;
+		width:40%;
+	}
+	.panel-medium{
+		width: 100%;
+		height:auto;
+	}
+	.panel-big{
+		width: 100%;
+		position:relative;
+		left:0;
+		top:0;
+	}
+	dl:nth-child(1){
+		opacity: 1;
+		transform:  translate(0, 0);
+		transition: all 450ms ease-in-out;
+		z-index: 2;
+	}
+	dl:nth-child(2){
+		opacity: 1;
+		transform:  translate(215px,0);
+		transition: all 450ms ease-in-out;
+		z-index: 3;
+	}
+	dl:nth-child(3){
+		opacity: 0;
+		transform:  translate(410px, 0);
+		transition: all 450ms ease-in-out;
+		z-index: 4;
+	}
+}
